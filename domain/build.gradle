@@ -43,6 +43,10 @@ dependencies {
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-compiler:$hilt_version"
 
+    def retrofit = "2.9.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit"
+
     def coroutine = "1.5.1"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine"
 

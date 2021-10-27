@@ -1,11 +1,19 @@
 package ali.baha.data.remote
 
-import ali.baha.data.model.RemoteModel
+import ali.baha.domain.model.ServerDrivenUiEntity
+import com.google.gson.JsonObject
+import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.POST
+import retrofit2.http.Url
 
 interface RemoteHelper {
+    @GET("server_driven_ui/type5/")
+    suspend fun getServerDrivenUiData(): ServerDrivenUiEntity?
 
-    @GET("server_driven_ui/type4/")
-    suspend fun getServerDrivenUiData(): RemoteModel?
-
+    @POST
+    suspend fun getClickData(
+        @Url url : String,
+        @Body jsonObject:JsonObject
+    ) : String
 }
