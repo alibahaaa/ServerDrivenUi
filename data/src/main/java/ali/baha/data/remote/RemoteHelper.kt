@@ -1,5 +1,6 @@
 package ali.baha.data.remote
 
+import ali.baha.data.remote.model.RemotePostModel
 import ali.baha.domain.model.ServerDrivenUiEntity
 import com.google.gson.JsonObject
 import retrofit2.http.Body
@@ -15,5 +16,5 @@ interface RemoteHelper {
     suspend fun getClickData(
         @Url url : String,
         @Body jsonObject:JsonObject
-    ) : String
+    ) : RemotePostModel?
 }

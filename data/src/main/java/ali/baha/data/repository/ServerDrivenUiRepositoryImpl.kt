@@ -50,7 +50,7 @@ class ServerDrivenUiRepositoryImpl @Inject constructor(
         emit(DataState.Loading)
         try {
             val response = remoteService.getClickData(url, jsonObject)
-            emit(DataState.Success(data = response))
+            emit(DataState.Success(data = response?.username!!))
         } catch (e: Exception) {
             emit(DataState.Error(exception = e))
         }
