@@ -1,4 +1,4 @@
-package ali.baha.data.remote
+package ali.baha.data.remote.service
 
 import ali.baha.data.remote.model.RemotePostModel
 import ali.baha.domain.model.ServerDrivenUiEntity
@@ -8,8 +8,8 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Url
 
-interface RemoteHelper {
-    @GET("server_driven_ui/type5/")
+interface RemoteService {
+    @GET("server_driven_ui/type4/")
     suspend fun getServerDrivenUiData(): ServerDrivenUiEntity?
 
     @POST

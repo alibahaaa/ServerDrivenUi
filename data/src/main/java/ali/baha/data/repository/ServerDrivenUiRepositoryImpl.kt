@@ -1,8 +1,8 @@
 package ali.baha.data.repository
 
-import ali.baha.data.local.ServerDrivenUiDao
+import ali.baha.data.local.service.ServerDrivenUiDao
 import ali.baha.data.local.model.LocalServerDrivenUiModel
-import ali.baha.data.remote.RemoteService
+import ali.baha.data.remote.service.RemoteHelper
 import ali.baha.domain.model.KeyValueEntity
 import ali.baha.domain.model.ServerDrivenUiEntity
 import ali.baha.domain.repository.ServerDrivenUiRepository
@@ -14,14 +14,14 @@ import java.lang.Exception
 import javax.inject.Inject
 
 class ServerDrivenUiRepositoryImpl @Inject constructor(
-    private val remoteService: RemoteService,
+    private val remoteHelper: RemoteHelper,
     private val serverDrivenUiDao: ServerDrivenUiDao
 //    private val mapper: ModelMapper
 ) : ServerDrivenUiRepository {
     override suspend fun getServerDrivenUiData(): Flow<DataState<ServerDrivenUiEntity?>> = flow {
         emit(DataState.Loading)
         try {
-            val response = remoteService.getServerDrivenUiData()
+            val response = remoteHelper.getServerDrivenUiData()
 //            val res = mapper.mapFromEntity(response?.data!!)
             emit(DataState.Success(data = response))
         } catch (e: Exception) {
@@ -49,7 +49,7 @@ class ServerDrivenUiRepositoryImpl @Inject constructor(
     ): Flow<DataState<String>> = flow {
         emit(DataState.Loading)
         try {
-            val response = remoteService.getClickData(url, jsonObject)
+            val response = remoteHelper.getClickData(url, jsonObject)
             emit(DataState.Success(data = response?.username!!))
         } catch (e: Exception) {
             emit(DataState.Error(exception = e))

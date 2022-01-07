@@ -1,7 +1,7 @@
 package ali.baha.serverdrivenui.di
 
-import ali.baha.data.local.ServerDrivenUiDao
-import ali.baha.data.local.ServerDrivenUiDataBase
+import ali.baha.data.local.service.ServerDrivenUiDao
+import ali.baha.data.local.service.ServerDrivenUiDataBase
 import android.content.Context
 import androidx.room.Room
 import dagger.Module

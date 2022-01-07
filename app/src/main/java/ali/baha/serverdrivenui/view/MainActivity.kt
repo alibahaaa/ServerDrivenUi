@@ -1,4 +1,4 @@
-package ali.baha.serverdrivenui
+package ali.baha.serverdrivenui.view
 
 import ali.baha.domain.model.*
 import android.os.Bundle

@@ -1,10 +1,10 @@
-package ali.baha.data.remote
+package ali.baha.data.remote.service
 
 import ali.baha.data.remote.model.RemotePostModel
 import ali.baha.domain.model.ServerDrivenUiEntity
 import com.google.gson.JsonObject
 
-interface RemoteService {
+interface RemoteHelper {
 
     suspend fun getServerDrivenUiData(): ServerDrivenUiEntity?
 

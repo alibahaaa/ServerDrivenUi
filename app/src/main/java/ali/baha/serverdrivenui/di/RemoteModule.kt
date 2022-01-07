@@ -1,8 +1,8 @@
 package ali.baha.serverdrivenui.di
 
-import ali.baha.data.remote.RemoteHelper
-import ali.baha.data.remote.RemoteService
-import ali.baha.data.remote.RemoteServiceImpl
+import ali.baha.data.remote.service.RemoteService
+import ali.baha.data.remote.service.RemoteHelper
+import ali.baha.data.remote.service.RemoteHelperImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -23,11 +23,11 @@ object RemoteModule {
 
     @Singleton
     @Provides
-    fun provideBlogService(retrofit: Retrofit): RemoteHelper {
-        return retrofit.create(RemoteHelper::class.java)
+    fun provideRemoteService(retrofit: Retrofit): RemoteService {
+        return retrofit.create(RemoteService::class.java)
     }
 
     @Singleton
     @Provides
-    fun provideApiHelper(remoteServiceImpl: RemoteServiceImpl): RemoteService = remoteServiceImpl
+    fun provideRemoteHelper(remoteServiceImpl: RemoteHelperImpl): RemoteHelper = remoteServiceImpl
 }

@@ -1,4 +1,4 @@
-package ali.baha.data.local
+package ali.baha.data.local.service
 
 import ali.baha.data.local.model.LocalServerDrivenUiModel
 import androidx.room.Database
