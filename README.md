@@ -5,12 +5,10 @@ Have you ever wondered how we can change the UI of our program without a new rel
 #### This project uses the following technologies:
 
 > - Retrofit
-> - Room
 > - **Hilt DI**
 > - Kotlin Coroutines
 > - Flow
 > - View Model
-> - Navigation
 > - Repository pattern
 > - **Clean Architecture**
 > - **JetPack Compose**
