@@ -17,5 +17,5 @@ https://medium.com/@alibahaabadii/server-driven-ui-in-android-with-compose-bf188
 > - **JetPack Compose**
 
 #### Preview:
-> <img src="https://8pic.ir/uploads/Screenshot-1639307934.png" width=200>
+> <img src="https://miro.medium.com/max/1400/1*SWTSKiF5ifbs-2boOWHd6w.png" width=200>
 > 
